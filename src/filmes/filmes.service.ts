@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/database/PrismaService';
 import { FilmeDTO } from './filme.dto';
 
@@ -13,7 +13,7 @@ export class FilmesService {
       },
     });
     if (filmeExists) {
-      throw new Error('Filme já existe');
+      throw new BadRequestException('Filme já existe');
     }
     const filme = await this.prisma.filme.create({
       data,
