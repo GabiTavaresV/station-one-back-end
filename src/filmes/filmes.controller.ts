@@ -1,4 +1,4 @@
-import { Body, Controller, Get, HttpCode, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, Param, Post } from '@nestjs/common';
 import { FilmeDTO } from './filme.dto';
 import { FilmesService } from './filmes.service';
 
@@ -16,5 +16,11 @@ export class FilmesController {
   @HttpCode(200)
   async list() {
     return this.filmeService.list();
+  }
+
+  @Get(':id')
+  @HttpCode(200)
+  async listById(@Param() params) {
+    return this.filmeService.listById(params.id);
   }
 }

@@ -26,4 +26,16 @@ export class FilmesService {
     const listFilmes = await this.prisma.filme.findMany();
     return listFilmes;
   }
+
+  async listById(id: string) {
+    const returnFilme = await this.prisma.filme.findUnique({
+      where: {
+        id,
+      },
+    });
+    if (!returnFilme) {
+      throw new BadRequestException('Id não encontrado');
+    }
+    return returnFilme;
+  }
 }
