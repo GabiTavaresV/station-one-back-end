@@ -12,7 +12,6 @@
 
 ### Tecnologias Utilizadas
 
-As questões foram resolvidas usando as seguintes tecnologias:
 
 - [TypeScrip]
 - [Nodejs]
