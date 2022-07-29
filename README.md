@@ -29,7 +29,7 @@ As questões foram resolvidas usando as seguintes tecnologias:
    https://github.com/GabiTavaresV/station-one-back-end
 ```
 
-2. Rodar aplicação no terminal
+2. Instalar os pacotes do npm
 
 ```sh
     npm install
