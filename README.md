@@ -26,8 +26,13 @@
 
 ```sh
    https://github.com/GabiTavaresV/station-one-back-end
+  
 ```
 
+1. Criar um arquivo (.env) na raiz do projeto e adicionar a váriavel abaixo 
+```sh
+    DATABASE_URL="file:./dev.db"
+```
 2. Instalar os pacotes do npm
 
 ```sh
