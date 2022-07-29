@@ -3,7 +3,7 @@
   <h2 align="center">Crud de filmes  </h2>
 
   <p align="center">
-    Aplicação de uma de um crud de filmes, com criação, listagem de todos os filmes e listagem por Id .
+    Aplicação de um crud de filmes, com criação, listagem de todos os filmes e listagem por Id .
     <br />
   </p>
 </p>
@@ -34,13 +34,36 @@ As questões foram resolvidas usando as seguintes tecnologias:
 ```sh
     npm install
 ```
-3. Testar a aplicação no insomnia/Postman
+
+3. Rodar a aplicação
+
+```sh
+   npm run start
+```
+4. Testar a aplicação no insomnia/Postman
 
 ```sh
     Endpoints:
     Criar um filme: médodo POST: http://localhost:3000/filmes
     Listar todos os filmes: método GET: http://localhost:3000/filmes
     Listar filme por Id: método GET: http://localhost:3000/filmes/id
+```
+## :notebook_with_decorative_cover: Se erro no Prisma:
+
+1. Desinstalar o Prisma Client
+
+```sh
+   npm uninstall @prisma/cli @prisma/client
+```
+2. Instalar novamente o Prisma
+
+```sh
+   npx prisma generate
+```
+3. Rodar a aplicação
+
+```sh
+   npm run start
 ```
 
 
